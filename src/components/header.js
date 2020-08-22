@@ -5,7 +5,9 @@ const Header = ({ siteTitle }) => (
   <header className="mainNav">
     <span>{siteTitle}</span>
     <span>12 Main St, EH1 1AA</span>
-    <button>Book Now</button>
+    <a href="#booking">
+     <button>Book Now</button>
+    </a>
   </header>
 )
 

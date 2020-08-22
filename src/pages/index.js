@@ -7,6 +7,7 @@ import Img from "gatsby-image"
 import Menu from "../components/menu/menu"
 import LeafletMap from "../components/leafletMap"
 import Footer from "../components/footer"
+import Booking from "../components/booking.js"
 
 const IndexPage = ({ data }) => {
   const content = data.allContentfulContent.edges[0].node
@@ -49,7 +50,7 @@ const IndexPage = ({ data }) => {
         <div className="parallax"></div>
         <section className="container">
           <Menu />
-          {/* <Instagram /> */}
+          <Booking />
         </section>
         {typeof window !== "undefined" && (
           <LeafletMap
