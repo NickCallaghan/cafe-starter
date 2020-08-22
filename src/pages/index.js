@@ -20,6 +20,7 @@ const IndexPage = ({ data }) => {
           className="hero-image"
         />
       </section>
+
       <section className="container">
         <span className="description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
