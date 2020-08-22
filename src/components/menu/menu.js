@@ -1,34 +1,36 @@
-import React, { useState } from 'react'
-import Breakfast from './breakfast'
-import Lunch from './lunch'
-import HotDrinks from './hot-drinks'
-import ColdDrinks from './cold-drinks'
+import React, { useState } from "react"
+import Lunch from "./lunch"
+import Drinks from "./drinks"
+import Dinner from "./dinner"
 
 const Menu = () => {
-  const [menuCategory, setMenuCategory] = useState('hotDrinks');
-  let SelectedCategory;
-  if (menuCategory === 'hotDrinks' ) {
-    SelectedCategory = HotDrinks;
-  } else if (menuCategory === 'coldDrinks') {
-    SelectedCategory = ColdDrinks
-  } else if (menuCategory === 'breakfast') {
-    SelectedCategory = Breakfast
-  } else if (menuCategory === 'lunch') {
+  const [menuCategory, setMenuCategory] = useState("lunch")
+  let SelectedCategory
+  if (menuCategory === "drinks") {
+    SelectedCategory = Drinks
+  } else if (menuCategory === "lunch") {
     SelectedCategory = Lunch
+  } else if (menuCategory === "dinner") {
+    SelectedCategory = Dinner
   }
-  
+
   return (
     <section className="menu">
       <h2>OUR MENUS</h2>
       <ul className="menu-headers">
-        <li className="menu-header" onClick={() => setMenuCategory('hotDrinks')}>Hot Drinks</li>
-        <li className="menu-header" onClick={() => setMenuCategory('coldDrinks')}>Cold Drinks</li>
-        <li className="menu-header" onClick={() => setMenuCategory('breakfast')}>Breakfast</li>
-        <li className="menu-header" onClick={() => setMenuCategory('lunch')} >Lunch</li>
+        <li className="menu-header" onClick={() => setMenuCategory("lunch")}>
+          Lunch
+        </li>
+        <li className="menu-header" onClick={() => setMenuCategory("dinner")}>
+          Dinner
+        </li>
+        <li className="menu-header" onClick={() => setMenuCategory("drinks")}>
+          Drinks
+        </li>
       </ul>
       <SelectedCategory />
     </section>
   )
 }
 
-export default Menu;
+export default Menu

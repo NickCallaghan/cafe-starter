@@ -1,10 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Lunch = () => {
+const Drinks = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulMenuItem(filter: { category: { title: { eq: "lunch" } } }) {
+      allContentfulMenuItem(
+        filter: { category: { title: { eq: "Cold Drinks" } } }
+      ) {
         edges {
           node {
             title
@@ -20,9 +22,9 @@ const Lunch = () => {
   `)
 
   const items = data.allContentfulMenuItem.edges
-  console.log(items)
   return (
     <div>
+      <p className="sample">SAMPLE MENU</p>
       <ul className="menu-items-grid">
         {items.map(({ node }) => {
           return (
@@ -37,4 +39,4 @@ const Lunch = () => {
   )
 }
 
-export default Lunch
+export default Drinks
