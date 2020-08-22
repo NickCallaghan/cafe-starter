@@ -17,7 +17,13 @@ const Instagram = () => {
             timestamp
             localFile {
               childImageSharp {
-                fixed(width: 280, height: 280)
+                fixed(width: 280, height: 280) {
+                  base64
+                  width
+                  height
+                  src
+                  srcSet
+                }
               }
             }
           }

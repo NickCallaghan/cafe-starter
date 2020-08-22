@@ -64,3 +64,4 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+console.log(process.env)
