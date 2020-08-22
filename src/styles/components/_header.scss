@@ -1,4 +1,4 @@
-header {
+header.mainNav {
   position: fixed;
   z-index: 10;
   height: 50px;
@@ -8,18 +8,22 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 30px 10px;
 
   span {
     font-size: $ms-size;
   }
-
   button {
-    border-radius: 5px;
-    padding: 0.2em 0.5em;
-    text-transform: uppercase;
+    padding: 0.3em 1em;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 7px;
+  }
+  button:hover {
     background-color: white;
-    border: none;
-    outline: none;
+    color: #000;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
   }
 }

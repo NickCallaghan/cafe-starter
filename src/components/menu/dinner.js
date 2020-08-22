@@ -18,11 +18,12 @@ const Dinner = () => {
       }
     }
   `)
-
   const items = data.allContentfulMenuItem.edges
   console.log(items)
   return (
     <div>
+      <p className="sample">DINNER MENU</p>
+
       <ul className="menu-items-grid">
         {items.map(({ node }) => {
           return (

@@ -13,51 +13,53 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
-      <section className="hero">
-        <Img
-          fluid={data.coffeeShop.childImageSharp.fluid}
-          className="hero-image"
-        />
-      </section>
+      <div className="main">
+        <SEO title="Home" />
+        <section className="hero">
+          <Img
+            fluid={data.coffeeShop.childImageSharp.fluid}
+            className="hero-image"
+          />
+        </section>
 
-      <section className="container">
-        <span className="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <div className="gallery-grid">
-          <Img
-            fluid={data.latte.childImageSharp.fluid}
-            className="gallery-img1"
+        <section className="container">
+          <span className="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <div className="gallery-grid">
+            <Img
+              fluid={data.latte.childImageSharp.fluid}
+              className="gallery-img1"
+            />
+            <Img
+              fluid={data.coffeeBags.childImageSharp.fluid}
+              className="gallery-img2"
+            />
+            <Img
+              fluid={data.coffeePortrait.childImageSharp.fluid}
+              className="gallery-img3"
+            />
+          </div>
+          <div className="about-grid">
+            <h2>{content.title}</h2>
+            <p>{content.text.text}</p>
+          </div>
+        </section>
+        <div className="parallax"></div>
+        <section className="container">
+          <Menu />
+          {/* <Instagram /> */}
+        </section>
+        {typeof window !== "undefined" && (
+          <LeafletMap
+            position={[55.9524162, -3.1731507]} // Your Coordinates
+            zoom={18} // Zoom Level
+            markerText={"The Queen's House, 65 Park Row"} // Icon text
           />
-          <Img
-            fluid={data.coffeeBags.childImageSharp.fluid}
-            className="gallery-img2"
-          />
-          <Img
-            fluid={data.coffeePortrait.childImageSharp.fluid}
-            className="gallery-img3"
-          />
-        </div>
-        <div className="about-grid">
-          <h2>{content.title}</h2>
-          <p>{content.text.text}</p>
-        </div>
-      </section>
-      <div className="parallax"></div>
-      <section className="container">
-        <Menu />
-        {/* <Instagram /> */}
-      </section>
-      {typeof window !== "undefined" && (
-        <LeafletMap
-          position={[55.9524162, -3.1731507]} // Your Coordinates
-          zoom={18} // Zoom Level
-          markerText={"The Queen's House, 65 Park Row"} // Icon text
-        />
-      )}
-      <Footer />
+        )}
+        <Footer />
+      </div>
     </Layout>
   )
 }

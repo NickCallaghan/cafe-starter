@@ -4,9 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const Drinks = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulMenuItem(
-        filter: { category: { title: { eq: "Cold Drinks" } } }
-      ) {
+      allContentfulMenuItem(filter: { category: { title: { eq: "drinks" } } }) {
         edges {
           node {
             title
@@ -24,7 +22,7 @@ const Drinks = () => {
   const items = data.allContentfulMenuItem.edges
   return (
     <div>
-      <p className="sample">SAMPLE MENU</p>
+      <p className="sample">DRINKS MENU</p>
       <ul className="menu-items-grid">
         {items.map(({ node }) => {
           return (

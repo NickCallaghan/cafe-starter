@@ -23,6 +23,7 @@ const Lunch = () => {
   console.log(items)
   return (
     <div>
+      <p className="sample">LUNCH MENU</p>
       <ul className="menu-items-grid">
         {items.map(({ node }) => {
           return (
