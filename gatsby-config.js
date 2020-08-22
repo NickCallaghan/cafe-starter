@@ -41,12 +41,13 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `nickcallaghan`, // Your Instagram
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-instagram`,
+    //   options: {
+    //     type: `user-profile`,
+    //     username: `nickcallaghan`, // Your Instagram
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -64,4 +65,3 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
-console.log(process.env)
