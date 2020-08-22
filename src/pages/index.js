@@ -5,11 +5,12 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Menu from "../components/menu/menu"
-// import Instagram from "../components/instagram"
 import LeafletMap from "../components/leafletMap"
 import Footer from "../components/footer"
 
 const IndexPage = ({ data }) => {
+  const content = data.allContentfulContent.edges[0].node
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -39,16 +40,8 @@ const IndexPage = ({ data }) => {
           />
         </div>
         <div className="about-grid">
-          <h2>WE'RE CRAZY ABOUT COFFEE</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <h2>{content.title}</h2>
+          <p>{content.text.text}</p>
         </div>
       </section>
       <div className="parallax"></div>
@@ -91,6 +84,19 @@ export const pageQuery = graphql`
     }
     coffeeBags: file(relativePath: { eq: "coffee-bags.jpg" }) {
       ...fluidImage
+    }
+    allContentfulContent(
+      filter: { id: { eq: "e64c76b6-a69b-574a-940e-fb1ccec0da37" } }
+    ) {
+      edges {
+        node {
+          id
+          title
+          text {
+            text
+          }
+        }
+      }
     }
   }
 `

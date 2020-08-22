@@ -9,8 +9,17 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
-  
+
   span {
     font-size: $ms-size;
+  }
+
+  button {
+    border-radius: 5px;
+    padding: 0.2em 0.5em;
+    text-transform: uppercase;
+    background-color: white;
+    border: none;
+    outline: none;
   }
 }
