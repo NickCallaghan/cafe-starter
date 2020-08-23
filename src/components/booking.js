@@ -7,7 +7,12 @@ const Booking = () => {
     <section id="booking">
       <h2>Make a booking</h2>
       <p>Reservations are available for groups of up to 8 people.</p>
-      <Button variant="dark">Book Now</Button>
+      <Button
+        variant="dark"
+        link="https://bookingninja.io/bookings/burger-restaurant"
+      >
+        Book Now
+      </Button>
     </section>
   )
 }
