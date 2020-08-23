@@ -1,18 +1,13 @@
 import React, { useState } from "react"
 import { withPrefix } from "gatsby"
-import Helmet from "react-helmet"
+import Button from "./button.js"
 
 const Booking = () => {
   return (
     <section id="booking">
       <h2>Make a booking</h2>
-      <p>
-        Amet consectetur sit ullamco eiusmod dolore magna reprehenderit
-        cupidatat tempor pariatur. Officia in ea duis excepteur exercitation
-        aliqua. Ipsum occaecat ad ad esse aute aliquip do mollit eu. Nulla
-        cupidatat deserunt nostrud nostrud magna velit qui ea ex culpa minim
-        mollit. Incididunt duis magna aute proident laborum irure sunt ad.
-      </p>
+      <p>Reservations are available for groups of up to 8 people.</p>
+      <Button variant="dark">Book Now</Button>
     </section>
   )
 }

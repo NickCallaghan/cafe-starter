@@ -9,12 +9,23 @@
   }
   button:hover {
     background-color: white;
-    color: #000;
-    transition: all 0.5s;
-    transition-timing-function: ease-in-out;
+    color: #191919;
+    transition: all 0.4s;
+    transition-timing-function: ease-out;
   }
   button:active,
   button:focus {
     outline: none;
+  }
+}
+
+.btn.btn-dark {
+  button {
+    color: #191919;
+    border: 1px solid #191919;
+  }
+  button:hover {
+    background-color: #191919;
+    color: white;
   }
 }

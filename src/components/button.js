@@ -1,10 +1,12 @@
 import React from "react"
 
-const Button = ({ children, link }) => {
+const Button = ({ children, link, variant = "light" }) => {
+  let buttonStyles = {}
+
   return (
-    <div className="btn">
+    <div className={`btn btn-${variant}`}>
       <a href={link} target="_blank" rel="noreferrer">
-        <button>{children}</button>
+        <button style={buttonStyles}>{children}</button>
       </a>
     </div>
   )
