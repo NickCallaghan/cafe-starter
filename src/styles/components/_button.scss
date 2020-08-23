@@ -1,0 +1,20 @@
+.btn {
+  button {
+    padding: 0.3em 1em;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 7px;
+    min-width: 140px;
+  }
+  button:hover {
+    background-color: white;
+    color: #000;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+  }
+  button:active,
+  button:focus {
+    outline: none;
+  }
+}

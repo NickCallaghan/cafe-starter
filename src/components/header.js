@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Button from "./button.js"
 
 const Header = ({ siteTitle }) => (
   <header className="mainNav">
@@ -7,12 +8,9 @@ const Header = ({ siteTitle }) => (
       <div className="siteTitle">{siteTitle}</div>
       <div>1 McDonald Ave, EH1 1AA</div>
     </div>
-    <a
-      href="https://bookingninja.io/bookings/burger-restaurant"
-      target="_blank"
-    >
-      <button>Book Now</button>
-    </a>
+    <Button link="https://bookingninja.io/bookings/burger-restaurant">
+      Book Now
+    </Button>
   </header>
 )
 
