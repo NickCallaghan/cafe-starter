@@ -1,7 +1,6 @@
-html{
+html {
   scroll-behavior: smooth;
 }
-
 
 main {
   background-color: $background;
@@ -112,7 +111,7 @@ h2 {
   }
 }
 .parallax {
-  background-image: url("../images/coffee-landscape.jpg");
+  background-image: url("../images/food-hero.jpg");
   background-attachment: fixed;
   background-position: 60% 50%;
   background-repeat: no-repeat;

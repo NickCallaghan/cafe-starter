@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
         <SEO title="Home" />
         <section className="hero">
           <Img
-            fluid={data.coffeeShop.childImageSharp.fluid}
+            fluid={data.mainHero.childImageSharp.fluid}
             className="hero-image"
           />
         </section>
@@ -30,15 +30,15 @@ const IndexPage = ({ data }) => {
           </span>
           <div className="gallery-grid">
             <Img
-              fluid={data.latte.childImageSharp.fluid}
+              fluid={data.cocktail.childImageSharp.fluid}
               className="gallery-img1"
             />
             <Img
-              fluid={data.coffeeBags.childImageSharp.fluid}
+              fluid={data.foodLandscape.childImageSharp.fluid}
               className="gallery-img2"
             />
             <Img
-              fluid={data.coffeePortrait.childImageSharp.fluid}
+              fluid={data.burgerPortrait.childImageSharp.fluid}
               className="gallery-img3"
             />
           </div>
@@ -77,16 +77,16 @@ export const fluidImage = graphql`
 
 export const pageQuery = graphql`
   query {
-    coffeeShop: file(relativePath: { eq: "coffee-shop-exterior.jpg" }) {
+    mainHero: file(relativePath: { eq: "main-hero.jpg" }) {
       ...fluidImage
     }
-    coffeePortrait: file(relativePath: { eq: "coffee-portrait.jpg" }) {
+    burgerPortrait: file(relativePath: { eq: "burger-portrait.jpg" }) {
       ...fluidImage
     }
-    latte: file(relativePath: { eq: "latte.jpg" }) {
+    cocktail: file(relativePath: { eq: "cocktail.jpg" }) {
       ...fluidImage
     }
-    coffeeBags: file(relativePath: { eq: "coffee-bags.jpg" }) {
+    foodLandscape: file(relativePath: { eq: "foodLandscape.jpg" }) {
       ...fluidImage
     }
     allContentfulContent(
