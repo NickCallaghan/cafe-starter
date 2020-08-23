@@ -6,8 +6,8 @@ if (process.env.NODE_ENV !== "production") {
 
 module.exports = {
   siteMetadata: {
-    title: `Cafe Demo Site`,
-    description: `  `,
+    title: `Burger Restaurant`,
+    description: ` `,
     author: `Nick Callaghan`,
   },
   plugins: [

@@ -11,11 +11,11 @@ const Footer = () => {
       <section>
         <div className="address">
           <h3>WHERE ARE WE?</h3>
-          <span>65 Park Row</span>
-          <span>Edinburgh, EH1 4PE</span>
+          <span>1 McDonald Ave,</span>
+          <span>Edinburgh, EH1 1AA</span>
           <span>
             <FontAwesomeIcon icon={faPhoneAlt} />
-            &nbsp; 01632 960966
+            &nbsp; 01234 567890
           </span>
         </div>
         <div className="hours">

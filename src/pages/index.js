@@ -25,8 +25,8 @@ const IndexPage = ({ data }) => {
 
         <section className="container">
           <span className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Welcome to <strong>The Burger Restaurant</strong>, home of
+            scotland's best burgers right in the heart of Edinburgh.
           </span>
           <div className="gallery-grid">
             <Img
@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => {
           <LeafletMap
             position={[55.9524162, -3.1731507]} // Your Coordinates
             zoom={18} // Zoom Level
-            markerText={"The Queen's House, 65 Park Row"} // Icon text
+            markerText={"Burger Restaurant, 1 McDonald Ave, EH1 1AA"} // Icon text
           />
         )}
         <Footer />
