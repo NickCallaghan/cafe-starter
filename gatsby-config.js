@@ -7,8 +7,21 @@ if (process.env.NODE_ENV !== "production") {
 module.exports = {
   siteMetadata: {
     title: `Burger Restaurant`,
-    description: ` `,
-    author: `Nick Callaghan`,
+    description: `This is the description for the burger bar`,
+    address: {
+      street: "123 Main St",
+      city: "Edinburgh",
+      postcode: "EH1 1EE",
+    },
+    telephone: "01234 567890",
+    author: "Nick Callaghan",
+    authorHome: "http://www.mrnickcallaghan.com/",
+    social: {
+      instaUrl: "https://www.instagram.com/",
+      twitterUrl: "https://www.twitter.com/",
+      facebookUrl: "http://www.facebook.com/",
+    },
+    bookingLink: "https://bookingninja.io/bookings/burger-restaurant",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

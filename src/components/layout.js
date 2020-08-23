@@ -14,9 +14,23 @@ import "../styles/styles.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query SiteMetaData {
       site {
         siteMetadata {
+          address {
+            city
+            postcode
+            street
+          }
+          author
+          bookingLink
+          description
+          social {
+            facebookUrl
+            instaUrl
+            twitterUrl
+          }
+          telephone
           title
         }
       }
@@ -25,7 +39,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        address={data.site.siteMetadata.address.street}
+        postcode={data.site.siteMetadata.address.postcode}
+        bookingLink={data.site.siteMetadata.bookingLink}
+      />
       <div>
         <main>{children}</main>
       </div>
