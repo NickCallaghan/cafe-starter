@@ -6,7 +6,7 @@ if (process.env.NODE_ENV !== "production") {
 
 module.exports = {
   siteMetadata: {
-    title: `Burger Restaurant`,
+    title: `🍔Burger Restaurant`,
     description: `This is the description for the burger bar`,
     address: {
       street: "123 Main St",
