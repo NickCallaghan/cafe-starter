@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+import { withPrefix } from "gatsby"
+import Helmet from "react-helmet"
 
 const Booking = () => {
   return (
