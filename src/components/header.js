@@ -5,7 +5,10 @@ const Header = ({ siteTitle }) => (
   <header className="mainNav">
     <span>{siteTitle}</span>
     <span>1 McDonald Ave, EH1 1AA</span>
-    <a href="https://bookingninja.io/bookings/demo-cafe" target="_blank">
+    <a
+      href="https://bookingninja.io/bookings/burger-restaurant"
+      target="_blank"
+    >
       <button>Book Now</button>
     </a>
   </header>
