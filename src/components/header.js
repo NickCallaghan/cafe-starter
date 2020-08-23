@@ -3,8 +3,10 @@ import PropTypes from "prop-types"
 
 const Header = ({ siteTitle }) => (
   <header className="mainNav">
-    <span>{siteTitle}</span>
-    <span>1 McDonald Ave, EH1 1AA</span>
+    <div className="siteDetails">
+      <div className="siteTitle">{siteTitle}</div>
+      <div>1 McDonald Ave, EH1 1AA</div>
+    </div>
     <a
       href="https://bookingninja.io/bookings/burger-restaurant"
       target="_blank"

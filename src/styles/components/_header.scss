@@ -1,14 +1,31 @@
 header.mainNav {
   position: fixed;
   z-index: 10;
-  height: 50px;
+  min-height: 40px;
   width: 100%;
   background-color: $green;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 10px;
+  padding: 20px;
+
+  .siteDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2em;
+    @media only screen and (min-width: 640px) {
+      flex-direction: row;
+    }
+    .siteTitle {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  }
 
   span {
     font-size: $ms-size;
@@ -19,11 +36,16 @@ header.mainNav {
     color: #fff;
     border: 1px solid white;
     border-radius: 7px;
+    min-width: 140px;
   }
   button:hover {
     background-color: white;
     color: #000;
     transition: all 0.5s;
     transition-timing-function: ease-in-out;
+  }
+  button:active,
+  button:focus {
+    outline: none;
   }
 }
